@@ -91,6 +91,9 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
+                setState(() {
+                  scoreKeeper.add(Icon(Icons.close, color: Colors.red));
+                });
                 //The user picked false.
               },
             ),
