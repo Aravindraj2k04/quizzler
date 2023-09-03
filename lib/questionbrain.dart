@@ -1,6 +1,5 @@
 import 'question.dart';
 
-
 class questionbrain {
   List<Question> questionBank = [
     Question(q: 'You can lead a cow down stairs but not up stairs.', a: false),
@@ -30,8 +29,9 @@ class questionbrain {
   void nextQuestion(int questionnumber) {
     if (questionnumber < questionBank.length - 1) {
       questionnumber++;
-    }
-    else {
+      print('increamented question number');
+      print('$questionnumber');
+    } else {
       questionnumber = 0;
     }
   }
