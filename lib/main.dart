@@ -6,8 +6,9 @@ class Quizzler extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.grey.shade900,
+        //backgroundColor: Colors.grey.shade900,
         body: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -26,7 +27,7 @@ class Question {
   Question({
     required String q,
     required bool a,
-  })   : questionText = q,
+  })  : questionText = q,
         questionAnswer = a;
 }
 
@@ -34,22 +35,46 @@ class QuestionBrain {
   int _questionNumber = 0;
 
   List<Question> _questionBank = [
-   Question(q: 'In Breaking Bad, what is the street name of Walter White\'s blue meth?', a: true),
-    Question(q: 'Which Marvel character possesses the power of the Infinity Gauntlet?', a: true),
-    Question(q: 'In DC Comics, who is the alter ego of the superhero known as the Green Lantern?', a: true),
-    Question(q: 'What is the alias used by the drug lord in Breaking Bad who is known for his meticulousness?', a: true),
-    Question(q: 'In the Marvel Universe, what metal is Wolverine\'s adamantium skeleton coated with?', a: true),
-    Question(q: 'Who is the primary antagonist in Breaking Bad, known for his bell and wheelchair?', a: true),
-    Question(q: 'In DC Comics, which city is the home of the superhero The Flash?', a: true),
-    Question(q: 'What is the real name of the superhero Thor in the Marvel Universe?', a: true),
-    Question(q: 'In Breaking Bad, what is the name of the lawyer who helps the main characters with their legal troubles?', a: true),
-    Question(q: 'In Marvel Comics, who is the arch-enemy of Spider-Man, known for wearing a mechanical suit?', a: true),
-    Question(q: 'Which DC Comics villain is often depicted as Batman\'s greatest enemy, known for his purple suit and green hair?', a: true),
-    Question(q: 'In Breaking Bad, what is the significance of the pink teddy bear?', a: true),
-    Question(q: 'In the Marvel Cinematic Universe, which character wields the power of the Time Stone?', a: true),
-    Question(q: 'Which DC superhero is known for using arrows with various trick arrowheads?', a: true),
-    Question(q: 'What is the alias of the scientist who becomes the supervillain known as Doctor Octopus in Spider-Man comics?', a: true),
-
+    Question(
+        q: "Walter White's alias 'Heisenberg' is inspired by the physicist Werner Heisenberg.",
+        a: true),
+    Question(
+        q: "Marvel's Black Widow, Natasha Romanoff, has superhuman powers.",
+        a: false),
+    Question(
+        q: "In Breaking Bad, Jesse Pinkman becomes a chemistry teacher.",
+        a: false),
+    Question(q: "The Joker is a primary antagonist in DC Comics.", a: true),
+    Question(q: "Marvel's Thor is the Norse god of thunder.", a: true),
+    Question(
+        q: "In Breaking Bad, Saul Goodman's real name is James Morgan 'Jimmy' McGill.",
+        a: true),
+    Question(
+        q: "The Green Arrow is a DC superhero who primarily uses a sword as his weapon.",
+        a: false),
+    Question(
+        q: "In Marvel Comics, Captain America's shield is made of adamantium.",
+        a: false),
+    Question(
+        q: "The Marvel character Deadpool is known for his accelerated healing factor.",
+        a: true),
+    Question(
+        q: "Lex Luthor is the arch-enemy of Wonder Woman in DC Comics.",
+        a: false),
+    Question(
+        q: "In Breaking Bad, the character Gustavo Fring is a high school chemistry teacher.",
+        a: false),
+    Question(
+        q: "The DC superhero The Flash can travel faster than the speed of light.",
+        a: true),
+    Question(
+        q: "In Marvel Comics, Black Panther is the king of the fictional African nation of Wakanda.",
+        a: true),
+    Question(
+        q: "Breaking Bad is primarily set in the state of Texas.", a: false),
+    Question(
+        q: "Doctor Strange is a neurosurgeon who gains mystical powers in Marvel Comics.",
+        a: true),
   ];
 
   void nextQuestion() {
@@ -86,13 +111,13 @@ class _QuizPageState extends State<QuizPage> {
 
   void checkAnswer(bool userAnswer) {
     bool correctAnswer = qBrain.getCorrectAnswer();
-    
+
     if (userAnswer == correctAnswer) {
       scoreKeeper.add(Icon(Icons.check, color: Colors.green));
     } else {
       scoreKeeper.add(Icon(Icons.close, color: Colors.red));
     }
-    
+
     setState(() {
       if (!qBrain.isFinished()) {
         qBrain.nextQuestion();
