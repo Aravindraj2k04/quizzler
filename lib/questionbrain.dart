@@ -24,12 +24,16 @@ class questionbrain {
     Question(q: 'Is JavaScript a statically typed language?', a: false),
     Question(
         q: 'Is 42 the answer to the ultimate question of life, the universe, and everything?',
-        a: true)
+        a: true),
+    Question(q: 'Questions gonna start again', a: true),
   ];
 
   void nextQuestion(int questionnumber) {
     if (questionnumber < questionBank.length - 1) {
       questionnumber++;
+    }
+    else {
+      questionnumber = 0;
     }
   }
 }
