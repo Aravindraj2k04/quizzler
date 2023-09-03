@@ -34,26 +34,22 @@ class QuestionBrain {
   int _questionNumber = 0;
 
   List<Question> _questionBank = [
-    Question(q: 'Is the Earth flat?', a: false),
-    Question(q: 'Is the sun a planet?', a: false),
-    Question(q: 'Is water a solid?', a: false),
-    Question(q: 'Is the capital of France London?', a: false),
-    Question(q: 'Can you divide by zero?', a: false),
-    Question(q: 'Is Walter White the main character in Breaking Bad?', a: true),
-    Question(q: 'Is Heisenberg a drug lord in Breaking Bad?', a: true),
-    Question(q: 'Is Jesse Pinkman a chemist in Breaking Bad?', a: false),
-    Question(q: 'Is Los Pollos Hermanos a fast-food chain in Breaking Bad?', a: true),
-    Question(q: 'Is Gustavo Fring a major antagonist in Breaking Bad?', a: true),
-    Question(q: 'Is Skyler White Walter White\'s wife in Breaking Bad?', a: true),
-    Question(q: 'Is Breaking Bad set in Albuquerque, New Mexico?', a: true),
-    Question(q: 'Is Marvel Comics the publisher of Spider-Man comics?', a: true),
-    Question(q: 'Is Tony Stark also known as Iron Man in Marvel Comics?', a: true),
-    Question(q: 'Is Gotham City the home of Batman in DC Comics?', a: true),
-    Question(q: 'Is Wonder Woman a member of the Justice League in DC Comics?', a: true),
-    Question(q: 'Is Bruce Wayne\'s secret identity Batman in DC Comics?', a: true),
-    Question(q: 'Is Thor a Norse god and a superhero in Marvel Comics?', a: true),
-    Question(q: 'Is the Hulk a member of the Avengers in Marvel Comics?', a: true),
-    Question(q: 'Is Black Widow a Russian spy and Avenger in Marvel Comics?', a: true),
+   Question(q: 'In Breaking Bad, what is the street name of Walter White\'s blue meth?', a: true),
+    Question(q: 'Which Marvel character possesses the power of the Infinity Gauntlet?', a: true),
+    Question(q: 'In DC Comics, who is the alter ego of the superhero known as the Green Lantern?', a: true),
+    Question(q: 'What is the alias used by the drug lord in Breaking Bad who is known for his meticulousness?', a: true),
+    Question(q: 'In the Marvel Universe, what metal is Wolverine\'s adamantium skeleton coated with?', a: true),
+    Question(q: 'Who is the primary antagonist in Breaking Bad, known for his bell and wheelchair?', a: true),
+    Question(q: 'In DC Comics, which city is the home of the superhero The Flash?', a: true),
+    Question(q: 'What is the real name of the superhero Thor in the Marvel Universe?', a: true),
+    Question(q: 'In Breaking Bad, what is the name of the lawyer who helps the main characters with their legal troubles?', a: true),
+    Question(q: 'In Marvel Comics, who is the arch-enemy of Spider-Man, known for wearing a mechanical suit?', a: true),
+    Question(q: 'Which DC Comics villain is often depicted as Batman\'s greatest enemy, known for his purple suit and green hair?', a: true),
+    Question(q: 'In Breaking Bad, what is the significance of the pink teddy bear?', a: true),
+    Question(q: 'In the Marvel Cinematic Universe, which character wields the power of the Time Stone?', a: true),
+    Question(q: 'Which DC superhero is known for using arrows with various trick arrowheads?', a: true),
+    Question(q: 'What is the alias of the scientist who becomes the supervillain known as Doctor Octopus in Spider-Man comics?', a: true),
+
   ];
 
   void nextQuestion() {
