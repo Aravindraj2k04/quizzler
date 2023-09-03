@@ -36,7 +36,6 @@ class _QuizPageState extends State<QuizPage> {
   int questionnumber = 0;
   @override
   Widget build(BuildContext context) {
-    
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -47,7 +46,7 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-               qbrain.questionBank[questionnumber].questionText,
+                qbrain.questionBank[questionnumber].questionText,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
@@ -73,7 +72,8 @@ class _QuizPageState extends State<QuizPage> {
               ),
               onPressed: () {
                 setState(() {
-                  bool correctAnswer = qbrain.questionBank[questionnumber].questionAnswer;
+                  bool correctAnswer =qbrain.questionBank[questionnumber].questionAnswer;
+                  print(qbrain.questionBank[questionnumber].questionText);
                   if (correctAnswer == true) {
                     print('user got it right');
                   } else {
@@ -81,7 +81,7 @@ class _QuizPageState extends State<QuizPage> {
                   }
                   scoreKeeper.add(Icon(Icons.check, color: Colors.green));
                   qbrain.nextQuestion(questionnumber);
-                
+
                   //The user picked true.
                 });
 
@@ -106,14 +106,15 @@ class _QuizPageState extends State<QuizPage> {
               ),
               onPressed: () {
                 setState(() {
-                  bool correctAnswer = qbrain.questionBank[questionnumber].questionAnswer;
+                  bool correctAnswer =
+                      qbrain.questionBank[questionnumber].questionAnswer;
                   if (correctAnswer == false) {
                     print('user got it right');
                   } else {
                     print('user got it wrong');
                   }
                   scoreKeeper.add(Icon(Icons.close, color: Colors.red));
-                   qbrain.nextQuestion(questionnumber);
+                  qbrain.nextQuestion(questionnumber);
                 });
                 //The user picked false.
               },
@@ -128,6 +129,3 @@ class _QuizPageState extends State<QuizPage> {
     );
   }
 }
-
-
-
