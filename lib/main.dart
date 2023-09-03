@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quizzler/questionbrain.dart';
+import 'questionbrain.dart';
 
 void main() => runApp(Quizzler());
 
@@ -79,7 +80,7 @@ class _QuizPageState extends State<QuizPage> {
                     print('user got it wrong');
                   }
                   scoreKeeper.add(Icon(Icons.check, color: Colors.green));
-                  questionnumber++;
+                  qbrain.nextQuestion(questionnumber);
                 
                   //The user picked true.
                 });
@@ -112,7 +113,7 @@ class _QuizPageState extends State<QuizPage> {
                     print('user got it wrong');
                   }
                   scoreKeeper.add(Icon(Icons.close, color: Colors.red));
-                  questionnumber++;
+                   qbrain.nextQuestion(questionnumber);
                 });
                 //The user picked false.
               },
@@ -130,8 +131,3 @@ class _QuizPageState extends State<QuizPage> {
 
 
 
-/*
-question1: 'You can lead a cow down stairs but not up stairs.', false,
-question2: 'Approximately one quarter of human bones are in the feet.', true,
-question3: 'A slug\'s blood is green.', true,
-*/
