@@ -78,7 +78,7 @@ class QuestionBrain {
     Question("In Breaking Bad, Walter White's son is named Walter Jr.", a: true),
     Question("IIs batman rich.", a: true),
   ];
-  ];
+
 
   void nextQuestion() {
     if (_questionNumber < _questionBank.length - 1) {
