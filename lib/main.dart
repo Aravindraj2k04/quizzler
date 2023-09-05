@@ -76,6 +76,8 @@ class QuestionBrain {
         q: "Doctor Strange is a neurosurgeon who gains mystical powers in Marvel Comics.",
         a: true),
     Question("In Breaking Bad, Walter White's son is named Walter Jr.", a: true),
+    Question("IIs batman rich.", a: true),
+  ];
   ];
 
   void nextQuestion() {
